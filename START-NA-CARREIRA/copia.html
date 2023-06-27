@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,300&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root{
+            --cor-primaria: lightcoral;
+            --cor-secundaria: dimgrey;
+            --cor-terciaria: gainsboro;
+       } 
+
+        body{
+            font-family: 'Lato', sans-serif;
+            font-size: 15px;
+            background-color: var(--cor-primaria);
+        }
+
+        main{
+            height: 520px;
+            width: 320px;
+            margin: 100px auto;
+            background-color: #ffffff;
+            border-radius: 20px;
+        }
+
+        h1{
+            background-color: var(--cor-terciaria);
+            font-size: 18px;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 15px;
+            border-top-right-radius:15px;
+            color: var(--cor-secundaria);
+            text-transform: uppercase;
+        }
+
+        form{
+            padding-left: 20px;
+        }
+
+        .inputNumber{
+            width: 55px;
+            height: 30px;
+            border: 2px solid var(--cor-secundaria);
+            padding-left: 5px;
+        }
+
+        .espaço{
+            padding-bottom: 20px;
+            padding-top: 10px;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        .input2{
+            width: 150px;
+            height: 30px;
+        }
+
+        .inputNumber:focus{
+            border: 3px solid var(--cor-primaria);
+        }
+
+        .input2{
+            border: 3px solid var(--cor-primaria);
+        }
+
+        button{
+            display: flex;
+            margin: auto;
+            margin-top: 70px;
+            width: 180px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--cor-primaria);
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        button:hover{
+            background-color: rgb(237, 104, 104);
+        }
+    </style>
+</head>
+<body>
+    <main>
+       <div>
+          <h1>Calculadora de gorjetas</h1>
+       </div>
+
+       <form>
+        <label for="preço1">
+            <p class="espaço">Quanto ficou a conta</p>
+        </label>
+        <p>
+           R$<input type="number" name="preço" id="preço1" placeholder="100" class="inputNumber">
+        </p>
+
+        <label for="opção1">
+            <p class="espaço">Como foi seu serviço?</p>
+        </label>
+        <select name="opção" id="opção1" class="input2">
+            <option value="" disabled selected>Escolha uma opção</option>
+            <option value="">30% - Incrível</option>
+            <option value="">20% - Bom</option>
+            <option value="">15% - Aceitavel</option>
+            <option value="">10% - Mediano</option>
+            <option value="">5% - Ruim</option>
+            <option value="">0% - Pessímo</option>
+       </select>
+
+       <label for="TotalP1">
+        <p class="espaço">Quantas pessoas vão dividir a conta</p>
+       </label>
+       <p>
+        <input type="number" name="TotalP" id="TotalP1" class="inputNumber" placeholder="1">pessoas
+       </p>
+
+       
+       </form>
+
+       <button type="submit">Calcular</button>
+   </main>
+</body>
+</html>
