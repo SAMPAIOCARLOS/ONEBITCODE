@@ -3,66 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro liga dos astronautas</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Cadastro</h1>
+    <h1>Cadastro da liga dos astronautas</h1>
 
     <form action="">
-
-       <label for="nome">Nome:</label>
-       <input type="text" id="nome" name="nome">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
 <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="password">-Password:</label>
+            <input type="password">
+        </div>
 <br>
-       <label for="email">Email:</label>
-       <input type="email" id="email" name="email">
+        <div>
+            <label for="data-nascimento">Data de nascimento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento">
 
-
-       <label for="password">-Password:</label>
-       <input type="password" id="password" name="password">
+            <label for="foto">-Foto:</label>
+            <input type="file" id="foto" name="foto">
+        </div>
 <br>
-<br>
-       <label for="data-nascimento">Data de nascimento:</label>
-       <input type="date" id="data-nascimento" name="data-nascimento">
+        <div>
+            <label for="nacionalidade">Nacionalidade:</label>
+            <select name="nacionalidade" id="nacionalidade">
+                <option value="" selected disabled>Escolha uma opção</option>
+                <option value="">Russo</option>
+                <option value="">Brasileiro</option>
+                <option value="">Americano</option>
+                <option value="">Bolsonaro</option>
+                <option value="">Baiano</option>
+            </select>
 
-
-       <label for="foto">-Foto:</label>
-       <input type="file" id="foto" name="foto">
-<br>
-<br>
-       <label for="nacionalidade">Nacionalidade:</label>
-       <select name="nacionalidade" id="nacionalidade">
-
-        <option value="" selected disabled>Escolha uma opção</option>
-        <option value="Russo">Russia-putin</option>
-        <option value="Russo">BR-lula picanha</option>
-        <option value="Russo" >bolsonaro come indio</option>
-
-       </select>
-
-       <label for="genero">-Genero</label>
-       F <input type="checkbox" id="genero">
-       M <input type="checkbox" id="genero">
-       Animal silvestre <input type="checkbox">
-
-<br>
-<br>
-
-       <label for="qualidades" style="display: block;">Suas principais qualidades:</label>
-
-       Inteligência <input type="checkbox" id="qualidades" name="qualidades">|
-       Resiliência <input type="checkbox" id="qualidades" name="qualidades">|
-       Preparo físico <input type="checkbox" id="qualidades" name="qualidades">|
-       Educação <input type="checkbox" id="qualidades" name="qualidades">|
-
-<br>
+            -Genero
+            <label for="Feminino">F</label>
+            <input type="radio" id="Feminino" name="Feminino">
+            <label for="Masculino">M</label>
+            <input type="radio" id="Masculino" name="Masculino">
+        </div>
 <br>
 
-       <input type="text" style="width: 240px; height: 150px;" placeholder="porque você gostaria de ser um austronauta">
+        <div>
+            <label for="qualidades">Suas principais qualidades:</label>
+            <br>
+            Inteligência <input type="checkbox" id="qualidades">|
+            Resiliência <input type="checkbox" id="qualidades" name="qualidades">|
+            Preparo físico <input type="checkbox" id="qualidades" name="qualidades">|
+            Educação <input type="checkbox" id="qualidades" name="qualidades">|
+        </div>
+<br>
+        <textarea name="descrição" id="descrição" cols="30" rows="10" placeholder="Porque você gostaria de ser  um austronauta?"></textarea>
 
-
-
-       <input type="submit" style="display: block; margin-top: 30px;" value="Criar">
+<br><br>
+        <input type="submit" value="Criar">
     </form>
+
+
 </body>
 </html>
