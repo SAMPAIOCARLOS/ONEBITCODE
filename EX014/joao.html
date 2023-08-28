@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const quantidadeMinimaCategoria1 = parseInt(window.prompt("Qual a quantidade minínma do estoque da categoria 1 :")
+);
+
+const produto1Nome = window.prompt("Digite o nome do primeiro produto: ");
+window.alert("O produto " + produto1Nome + " foi adicionado ao estoque.");
+
+const produto1Categoria = window.prompt("Digite a categoria do produto: ");
+window.alert("A Categoria " + produto1Categoria + " foi adicionado. ");
+
+const produto1Quantidade = parseInt(
+  window.prompt("Digite a quantidade do produto:")
+);
+window.alert("A quantidade " + produto1Quantidade + " foi adicionado:");
+
+if (produto1Quantidade < quantidadeMinimaCategoria1) {
+  window.alert(
+    "a quantidade de categoria " +
+      produto1Categoria +
+      " não pode ser menor que " +
+      quantidadeMinimaCategoria1
+  );
+}
+
+const quantidadeMinimaCategoria2 = parseInt(
+  window.prompt("Qual a quantidade minínma do estoque da categoria 2:")
+);
+
+const produto2Nome = window.prompt("Digite o nome do segundo produto: ");
+window.alert("O produto " + produto2Nome + " foi adicionado ao estoque.");
+
+const produto2Categoria = parseInt(
+  window.prompt("Digite a categoria do produto:")
+);
+window.alert("A Categoria " +  produto2Categoria  + " foi adicionado. ");
+
+const produto2Quantidade = parseInt(
+  window.prompt("Digite a quantidade do produto:")
+);
+window.alert("A quantidade " + produto2Quantidade + " foi adicionado.");
+
+if (produto2Quantidade < quantidadeMinimaCategoria2) {
+  window.alert(
+    "a quantidade de categoria " +
+      produto2Categoria +
+      " não pode ser menor que " +
+      quantidadeMinimaCategoria2
+  );
+}
+
+const produto1 = {
+  nome: produto1Nome,
+  categoria: produto1Categoria,
+  quantidade: produto1Quantidade,
+};
+
+const produto2 = {
+  nome: produto2Nome,
+  categoria: produto2Categoria,
+  quantidade: produto2Quantidade,
+};
+
+const QuantidadeTotal = produto1Quantidade + produto2Quantidade;
+
+window.alert("A soma total é: " + QuantidadeTotal);
+
+let porcentagemCat1 = (QuantidadeTotal/ produto1Quantidade) * 100;
+let porcentagemcat2 = (QuantidadeTotal / produto2Quantidade) * 100;
+
+window.alert("Porcentagem é :" + porcentagemCat1.toFixed(2) + "%");
+// console.log(produtos);
+window.alert("Porcentagem é :" + porcentagemcat2.toFixed(2) + "%");
+</script>
+</html>
