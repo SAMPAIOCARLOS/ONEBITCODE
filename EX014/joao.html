@@ -1,84 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(50, 46, 46);
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+    }
+
+    main{
+      /* border: 1px solid red; */
+      height: 330px;
+      background-color: black;
+      color: #ffffff;
+      padding: 20px;
+      padding-bottom: 50px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    td{
+      /* border: 1px solid blue; */
+      width: 50px;
+      height: 40px;
+      text-align: center;
+    }
+    input{
+      width: 190px;
+      padding: 10px;
+      margin-bottom: 30px;
+      border: none;
+      outline: none;
+      background-color: #00000090;
+      color: #ffffff;
+      text-align: end;
+    }
+
+    input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+/* input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+} */
+
+th, td{
+  border-radius: 50%;
+  cursor: pointer;
+}
+td:hover{
+  background-color: grey;
+  transition-duration: 0.3s;
+}
+th:hover{
+  background-color: gray;
+  transition-duration: 0.3s;
+}
+th{
+  padding: 10px;
+}
+
+  </style>
 </head>
 <body>
-    
+  <main>
+
+    <h1>calculadora</h1>
+
+    <table>
+
+      <thead>
+
+        <input type="number" id="barra">
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <th>AC</th>
+          <th><ion-icon name="close-circle-outline"></ion-icon></th>
+          <th>%</th>
+          <th>÷</th>
+        </tr>
+
+        <tr>
+          <td class="n7">7</td>
+          <td class="n8">8</td>
+          <td class="n9">9</td>
+          <td><ion-icon name="close-outline"></ion-icon></td>
+        </tr>
+
+        <tr>
+          <td class="n4">4</td>
+          <td class="n5">5</td>
+          <td class="n6">6</td>
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td class="n1">1</td>
+          <td class="n2">2</td>
+          <td class="n3">3</td>
+          <td>+</td>
+        </tr>
+
+        <tr>
+          <td><ion-icon name="git-pull-request-outline"></ion-icon></td>
+          <td>0</td>
+          <td>,</td>
+          <td><ion-icon name="chevron-forward-circle-outline"></ion-icon></td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </main>
 </body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 <script>
-    const quantidadeMinimaCategoria1 = parseInt(window.prompt("Qual a quantidade minínma do estoque da categoria 1 :")
-);
-
-const produto1Nome = window.prompt("Digite o nome do primeiro produto: ");
-window.alert("O produto " + produto1Nome + " foi adicionado ao estoque.");
-
-const produto1Categoria = window.prompt("Digite a categoria do produto: ");
-window.alert("A Categoria " + produto1Categoria + " foi adicionado. ");
-
-const produto1Quantidade = parseInt(
-  window.prompt("Digite a quantidade do produto:")
-);
-window.alert("A quantidade " + produto1Quantidade + " foi adicionado:");
-
-if (produto1Quantidade < quantidadeMinimaCategoria1) {
-  window.alert(
-    "a quantidade de categoria " +
-      produto1Categoria +
-      " não pode ser menor que " +
-      quantidadeMinimaCategoria1
-  );
-}
-
-const quantidadeMinimaCategoria2 = parseInt(
-  window.prompt("Qual a quantidade minínma do estoque da categoria 2:")
-);
-
-const produto2Nome = window.prompt("Digite o nome do segundo produto: ");
-window.alert("O produto " + produto2Nome + " foi adicionado ao estoque.");
-
-const produto2Categoria = parseInt(
-  window.prompt("Digite a categoria do produto:")
-);
-window.alert("A Categoria " +  produto2Categoria  + " foi adicionado. ");
-
-const produto2Quantidade = parseInt(
-  window.prompt("Digite a quantidade do produto:")
-);
-window.alert("A quantidade " + produto2Quantidade + " foi adicionado.");
-
-if (produto2Quantidade < quantidadeMinimaCategoria2) {
-  window.alert(
-    "a quantidade de categoria " +
-      produto2Categoria +
-      " não pode ser menor que " +
-      quantidadeMinimaCategoria2
-  );
-}
-
-const produto1 = {
-  nome: produto1Nome,
-  categoria: produto1Categoria,
-  quantidade: produto1Quantidade,
-};
-
-const produto2 = {
-  nome: produto2Nome,
-  categoria: produto2Categoria,
-  quantidade: produto2Quantidade,
-};
-
-const QuantidadeTotal = produto1Quantidade + produto2Quantidade;
-
-window.alert("A soma total é: " + QuantidadeTotal);
-
-let porcentagemCat1 = (QuantidadeTotal/ produto1Quantidade) * 100;
-let porcentagemcat2 = (QuantidadeTotal / produto2Quantidade) * 100;
-
-window.alert("Porcentagem é :" + porcentagemCat1.toFixed(2) + "%");
-// console.log(produtos);
-window.alert("Porcentagem é :" + porcentagemcat2.toFixed(2) + "%");
+  
 </script>
 </html>

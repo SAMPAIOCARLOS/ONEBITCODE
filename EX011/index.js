@@ -7,16 +7,18 @@ let velocidadeP = Number(window.prompt("Informe a velocidade do primeiro veícul
 let velocidadeS = Number(window.prompt("Informe a velocidade do segundo veiculo"))
 
 
-if(velocidadeP === velocidadeS){
+if (velocidadeP === velocidadeS){
     window.alert(`A VELOCIDADE DOS DOIS VEÍCULOS SÃO IGUAIS `)
     
     Document.window(`A VELOCIDADE DO ${primeiroVeiculo} e do ${segundoVeiculo} SÃO A MESMA!`)
     
-}if(velocidadeP > velocidadeS){
+}
+
+if (velocidadeP > velocidadeS) {
     window.alert(`O ${primeiroVeiculo} é mais rápido que o ${segundoVeiculo}`)
 
     document.write(`${primeiroVeiculo} CAMPEÃO`)
-}else{
+} else {
     window.alert(`O ${segundoVeiculo} é mais rápido que o ${primeiroVeiculo}`)
 
     document.write(`O ${segundoVeiculo} é CAMPEÃO`)
