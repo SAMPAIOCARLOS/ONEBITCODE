@@ -15,15 +15,15 @@ let resultado2 = primeiroValor - segundoValor
 let resultado3 = primeiroValor * segundoValor
 let resultado4 = primeiroValor / segundoValor
 
-if(operador === "+"){
+if(operador === "+") {
     window.alert(`O resultado entre ${primeiroValor} e ${segundoValor} é ${resultado1}`)
 }
-if(operador === "-"){
+if(operador === "-") {
     window.alert(`O resultado entre ${primeiroValor} e ${segundoValor} é ${resultado2}`)
 }
-if(operador === "*"){
+if(operador === "*") {
     window.alert(`O resultado entre ${primeiroValor} e ${segundoValor} é ${resultado3}`)
 }
-if(operador === "/"){
+if(operador === "/") {
     window.alert(`O resultado entre ${primeiroValor} e ${segundoValor} é ${resultado4}`)
 }

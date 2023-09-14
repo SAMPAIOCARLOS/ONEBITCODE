@@ -6,5 +6,5 @@ let campoDeEstudo = window.prompt("informe seu campo de estudo:")
 
 let anoDeNascimento = window.prompt("insira seu ano de nascimento")
 
-document.write(`Olá ${nome}! <br> <br> seu nome completo é: ${nome} ${sobrenome} <br> <br> seu campo de estudo é: ${campoDeEstudo} <br> <br> e você tem: ${2023 - anoDeNascimento} anos`)
+document.write(`Olá ${nome}! \n seu nome completo é: ${nome} ${sobrenome} \n seu campo de estudo é: ${campoDeEstudo} \n e você tem: ${2023 - anoDeNascimento} anos`)
 
