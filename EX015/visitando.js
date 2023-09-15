@@ -8,7 +8,7 @@ let CidadesVisitadas = ""
 
 while(VisitouCidade === "Sim"){
 
-   let cidade = doQuestion(`Qual o nome da cidade que você visitou?`)
+   let cidade = prompt(`Qual o nome da cidade que você visitou?`)
 
    CidadesVisitadas += "-" + cidade 
 
@@ -21,15 +21,10 @@ while(VisitouCidade === "Sim"){
 alert(`
    Olá ${turista}!! \n 
 
-   Total de cidades visitadas-${contagemDeCidades} \n 
+   Total de cidades visitadas ${contagemDeCidades} \n 
 
    Cidades visitadas: ${CidadesVisitadas} \n
    
 
 `)
 
-function doQuestion(question) {
-   const value = prompt(question);
-
-   return value
-}
