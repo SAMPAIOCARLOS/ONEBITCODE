@@ -1,30 +1,19 @@
-const turista = prompt(`Olá turista, qual seu nome:`)
+const turista = prompt(`Olá turista, como é seu nome?`)
 
-let VisitouCidade = prompt(`Você ja visitou alguma cidade? (Sim)/(Não)`)
+let VisitouCidade = prompt(`Você já visitou alguma cidade?  (Sim)/(Não)`)
 
-let contagemDeCidades = 0
+let cidadesVisitadas = '';
+let contagem = 0;
 
-let CidadesVisitadas = ""
+while (VisitouCidade.toLowerCase() === "sim") {
 
-while(VisitouCidade === "Sim"){
+   let QualCidade = prompt(`Qual cidade você visitou?`)
 
-   let cidade = prompt(`Qual o nome da cidade que você visitou?`)
+   cidadesVisitadas += `\n- ${QualCidade}\n `
 
-   CidadesVisitadas += "-" + cidade 
+   contagem++
 
-   contagemDeCidades++
-
-   VisitouCidade = prompt(`Você visitou mais alguma cidade? (Sim) (Não)`)
-
+   VisitouCidade = prompt(`Você visitou mais alguma cidade?`)
 }
 
-alert(`
-   Olá ${turista}!! \n 
-
-   Total de cidades visitadas ${contagemDeCidades} \n 
-
-   Cidades visitadas: ${CidadesVisitadas} \n
-   
-
-`)
-
+alert(`Olá ${turista}! \n \n Você visitou ${contagem} cidades \n \n Cidades visitadas ${cidadesVisitadas}`)
