@@ -1,21 +1,31 @@
-let paciente = prompt(`Olá paciente, como é seu nome?`)
+let listaDePacientes = ["carlos", "kauan", "marcos", "fabio", "nicolas", "josé"];
 
-let listaDePacientes = ["carlos", "halleph", "mateus", "joão", "seu zé"]
-let endWhile = false;
+let finalizarWhile = false;
 
-while(!endWhile) {
-    const option = parseInt(prompt(`Ola ${paciente} \n essa é a lista de espera do SUS: \n\n ${listaDePacientes.map((paciente, index) => `${index + 1}º ${paciente}`).join('\n')} Escolha uma da opções 1)Novo paciente \n 2) Consulta paciente \n 3)Sair`))
+while(finalizarWhile !== true) {
+    let opcao = parseInt(prompt(`Olá, essa é lista de espera do SUS: \n\n${listaDePacientes.join("\n")} \n\n escolha uma opção:\n 1)Novo Paciente \n 2)Consulta paciente \n 3)Sair`))
 
-    switch(option) {
-        case 1:
+    if (opcao === 1) {
+        let nomePaciente = prompt(`Iremos agendar o senhor para o final da lista, como é seu nome?`)
+        listaDePacientes.push(`${nomePaciente}`)
 
-        alert(`Ola ${paciente} o senhor sera direcionado ao final da fila`)
+        alert(`Olá ${nomePaciente}! essa é a nova lista de pacientes no qual o senhor estara agurdando... \n\n ${listaDePacientes.join("\n")}`)
+    } else if (opcao === 2) {
+        alert(`O paciente ${listaDePacientes.shift()} saiu para consulta...`)
 
-            listaDePacientes.push(paciente)
-            
-            endWhile = true
-            
-        break;
+        alert(`Essa é a nova lista de pacientes: \n\n ${listaDePacientes.join("\n")}`)
+    }else if (opcao === 3) {
+
+        alert(`Saindo...`)
+    
+        finalizarWhile = true
     }
-
 }
+
+
+
+
+
+
+
+
