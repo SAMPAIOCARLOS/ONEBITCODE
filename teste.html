@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script src="./test.js"></script>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background-color: #333;
+  padding: 40px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  color: #fff;
+  background-color: #777;
+  width: 30px;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+}
+  </style>
+  <body>
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil ut iste adipisci earum quam praesentium porro veritatis at cupiditate ratione voluptatum, vel natus maiores. Quis eum impedit repellat obcaecati?</p>
+      <div class="buttons">
+        <button class="alter-font-size" onclick="alterFontSize('add')">+</button>
+        <button class="alter-font-size" onclick="alterFontSize('remove')">-</button>
+      </div>
+    </div>
+
+    <script>
+     function alterFontSize(operation) {
+      const element = document.querySelector('.container p');
+      const currentFontSize = parseInt(window.getComputedStyle(element, null).getPropertyValue('font-size'));
+    //   alert(currentFontSize)
+
+      if (operation === 'add') {
+        element.style.fontSize = `${currentFontSize + 1}px`
+      } else {
+        if (currentFontSize === 1) return;
+        element.style.fontSize = `${currentFontSize - 1}px`
+      }
+     }
+    </script>
+  </body>
 </html>
