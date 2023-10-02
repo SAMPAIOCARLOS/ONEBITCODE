@@ -1,46 +1,54 @@
 let pessoa = {
-    nome:  "carlos",
-    altura: 1.78,
-        comida: [
-            'arroz com carne',
-            'farofa de ovo',
-            'cuzcus com ovo e café'
+    nome: 'carlos',
+    idade: 18,
+    sexo: 'macho',
+    rotina: {
+        6.00: 'acordar',
+        6.30: 'comer alguma coisa',
+        7.00: 'treino',
+        8.30: 'pos treino',
+        9.00: 'estudo',
+        12.00: 'almoço',
+        13.00: 'serviço',
+        18.00: 'faculdade',
+        21.30: 'casa',
+        22.30: 'dormir',
+    },
+    comidaFavoritas:  {
+        doces: [
+            'pudim', 'doce de leite', 'açai', 'chocolate',
         ],
-        atividades: {
-            acordar: '6:30',
-            academia: '7:00',
-            banho: '9:00',
-            estudos: '9:30 ate 12:00',
-            trabalho: '14:00 ate 18:00',
-            faculdade: '19:00 ate 21:00'
+        salgados: [
+            'coxinha', 'pastel', 'bomba', 'torta de frango', 'escondidinho', 'lasanha', 'etc...',
+        ],
+    },
+    passaTempo: [
+        'jogar Euro Truck',
+        'andar de moto (quando eu tinha)',
+        'Viajar viagens longas',
+        'Comer alguma coisa boa',
+    ],
+    Familia: {
+        parteDePai: {
+            tios: [
+                'tio odair', 'tio toninho', 'tio fabricio', 'tio rafael',
+            ], 
+            tias: [
+                'tia oslene', 'tia nalda', 'tia oliene', 'tia hozana',
+            ],
+            primos: [
+                'kauan', 'keven', 'nicolas', 'joas', 'junior',
+            ],
+            primas: [
+                'bia', 'nicole',
+            ],
+            
         },
-        setup: {
-            perifericos: [
-                'mouse','teclado','fone','mousepad'
-            ],
-            monitor: 'horizonz 21 VA 75hz',
-            notebook: [
-                'Aspire5', 'intel i7 10 geração', '8gb', '512SSD', 'VA',
-            ],
-
-            familia: {
-                partePai: {
-                    tios: [
-                        'odair','james','toninho','rafael',
-                    ],
-                    tias:[
-                        'oslene','oliene','osnalda','hozana',
-                    ]
-                }
-            }
-
-                
+        parteDemãe: {
             
         }
-
-        
+    }
 }
 
-console.log(pessoa.setup.notebook[1])
 
-console.log(pessoa.setup.familia.partePai.tias[2])
+console.log(pessoa.Familia.parteDePai.primos[1])
