@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever</title>
+    <style>
+       
+        div{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        button{
+            padding: 10px 50px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+               
+        }
+        #azul{
+            color: blue;
+            background-color: black;
+        }
+        #amarelo{
+            color: yellow;
+            background-color: black;
+        }
+        #verde{
+            color: green;
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="body">
+
+    <div>
+
+        <button id="azul">Azul</button>
+    <button id="verde">Verde</button>
+    <button id="amarelo">Amarelo</button>
+
+    </div>
+    
+</body>
+<script>
+    let fundo = document.body
+
+    let azul = document.getElementById('azul')
+    let amarelo = document.getElementById('amarelo')
+    let verde = document.getElementById('verde')
+
+    
+    azul.addEventListener('click', function()  {
+        fundo.style.backgroundColor = '#0000ff'
+    } )
+
+    amarelo.addEventListener('click', function () {
+        fundo.style.backgroundColor = '#ffff00'
+        
+    })
+
+    verde.addEventListener('click', function() {
+        fundo.style.backgroundColor = '#008000'
+    })
+
+ 
+
+
+</script>
+</html>
+
+
+
+
+
+
