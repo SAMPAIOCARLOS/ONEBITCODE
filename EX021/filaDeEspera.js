@@ -20,7 +20,8 @@ while(finalizarWhile !== true) {
     
         finalizarWhile = true
     }
-}
+};
+export let endwhile = false;
 
 
 
