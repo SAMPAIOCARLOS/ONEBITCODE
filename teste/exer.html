@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let usuarios = []
+
+    let endwhile = false
+
+    let option = ''
+
+    let pssUn = prompt(`Bem vindo a nosso gerenciamento de usuários!! \n digite (sim) para prosseguir`)
+
+    while (endwhile !== true) {
+
+    
+        if (pssUn.toLowerCase() === "sim") {
+            option = Number(prompt(`No que podemos ajudar \n\n 1)Cadastrar um novo usuário \n 2)Remover um usuário \n 3)Visualizar usuários cadastrados \n 4)Sair`))
+
+            switch (option) {
+                case 1 : let usuario = {} 
+                usuario.nome = prompt(`Informe seu nome:`)
+                usuario.email = prompt(`Informe seu email:`)
+                usuario.senha = Number(prompt(`Informe sua senha`))
+                usuario.cpf = Number(prompt(`Informe seu CPF:`))
+                
+                let confirme = confirm(`Tem certeza que deseja cadastrar esse usuário? \n\n Dados do Usuário: \n Nome: ${usuario.nome} \n Email: ${usuario.email} \n Senha: ${usuario.senha} \n CPF: ${usuario.cpf}`)
+
+                if (confirm === true) {
+                    usuarios.push(usuario)
+                    alert(`Usuário cadastrado com sucesso!!`)
+                }
+
+                break
+
+                case 2 : usuarios.shift()
+                alert(`O Usuario de nome ${usuarios[1]} foi removido!`)
+
+                break
+
+                case 3 : 
+                for (let i = 0; i < usuarios.length; i++) {
+                  alert(`O Usuário ${i + 1} \n Nome: ${usuarios[i].nome} \n email: ${usuarios[i].email} \n Senha: ${usuarios[i].senha} \n CPF: ${usuarios[i].cpf}`)
+                }
+                
+                
+            }
+        }
+    }
+</script>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let usuarios = []
+    let endwhile = false
+    let option = ''
+
+    let pssUn = prompt(`Bem-vindo ao nosso gerenciamento de usuários!!\nDigite (sim) para prosseguir`)
+
+    while (endwhile !== true) {
+        if (pssUn.toLowerCase() === "sim") {
+            option = Number(prompt(`No que podemos ajudar?\n\n1) Cadastrar um novo usuário\n2) Remover um usuário\n3) Visualizar usuários cadastrados\n4) Sair`))
+
+            switch (option) {
+                case 1:
+                    let usuario = {}
+                    usuario.nome = prompt(`Informe seu nome:`)
+                    usuario.email = prompt(`Informe seu email:`)
+                    usuario.senha = prompt(`Informe sua senha`)
+                    usuario.cpf = prompt(`Informe seu CPF:`)
+                    
+                    let confirme = confirm(`Tem certeza que deseja cadastrar esse usuário?\n\nDados do Usuário:\nNome: ${usuario.nome}\nEmail: ${usuario.email}\nSenha: ${usuario.senha}\nCPF: ${usuario.cpf}`)
+
+                    if (confirme === true) {
+                        usuarios.push(usuario)
+                        alert(`Usuário cadastrado com sucesso!!`)
+                    }
+
+                    break
+
+                case 2:
+                    if (usuarios.length === 0) {
+                        alert(`Não há usuários cadastrados para remover.`)
+                    } else {
+                        let indexToRemove = Number(prompt(`Digite o número do usuário que deseja remover:`)) - 1;
+
+                        if (indexToRemove >= 0 && indexToRemove < usuarios.length) {
+                            let removedUser = usuarios.splice(indexToRemove, 1);
+                            alert(`O usuário de nome ${removedUser[0].nome} foi removido!`)
+                        } else {
+                            alert(`Número de usuário inválido.`)
+                        }
+                    }
+
+                    break
+
+                case 3:
+                    if (usuarios.length === 0) {
+                        alert(`Não há usuários cadastrados.`)
+                    } else {
+                        for (let i = 0; i < usuarios.length; i++) {
+                            alert(`Usuário ${i + 1}\nNome: ${usuarios[i].nome}\nEmail: ${usuarios[i].email}\nSenha: ${usuarios[i].senha}\nCPF: ${usuarios[i].cpf}`)
+                        }
+                    }
+
+                    break
+
+                case 4:
+                    endwhile = true;
+                    alert(`Saindo do gerenciamento de usuários.`)
+                    break
+
+                default:
+                    alert(`Opção inválida. Por favor, escolha uma opção válida.`)
+            }
+        } else {
+            alert(`Opção inválida. Por favor, digite "sim" para continuar.`)
+            pssUn = prompt(`Digite (sim) para prosseguir`)
+        }
+    }
+</script>
+</html>
