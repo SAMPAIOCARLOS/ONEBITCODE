@@ -38,7 +38,7 @@ function areaCirculo() {
 
 let endwhile = false  
 
-while(endwhile !== true) {
+do{
 
     let option = Number(prompt(`Bem vindo a nossa calculadora geométrica!! \n\n Essa é a lista de opções que temos disponiveis \n\n ${lista.map((str, index) => `${index + 1}º :${str}`).join("\n")}  \n\n Escolha uma opção para prosseguir...`))
 
@@ -94,10 +94,7 @@ while(endwhile !== true) {
 
     }
 
-    
-
-}
-
+}while(endwhile !== true)
 
 // .map((str, index) => `${index + 1}º :${str}`).join("\n")
 

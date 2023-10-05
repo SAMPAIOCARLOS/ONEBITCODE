@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #000;">
+    <!-- <h1>### Calculadora Geométrica
+
+        Escreva um programa em javascript para calcular a área de diferentes formas geométricas. O programa deve iniciar com um menu contendo as diferentes opções de cálculas. As opções devem ser:
+        
+        - área do triângulo: base * altura / 2
+        - área do retângulo: base * altura
+        - área do quadrado: lado²
+        - área do trapézio: (base maior + base menor) * altura / 2
+        - área do círculo: pi * raio² (considere pi = 3.14)
+        
+        Você deve escrever o programa usando funções sempre que possível para separar os procedimentos. O programa também deve ter uma opção de “Sair” e enquanto ela não for escolhida deverá voltar ao menu.</h1> -->
+</body>
+<script>
+
+const lista = ['área do triângulo: base', 'área do retângulo', 'área do quadrado', 'área do trapézio', 'área do círculo', 'Sair']
+
+function areaTriangulo() {
+    const base = Number(prompt(`Informe a base:`))
+    const altura = Number(prompt(`Informe a altura:`))
+
+    return (base * altura) / 2
+}
+
+function areaRetangulo() {
+    const base = Number(prompt(`Informe a base:`))
+    const altura = Number(prompt(`Informe a altura:`))
+
+    return base * altura
+}
+
+function areaQuadrado() {
+    const lado = Number(prompt(`Insira o valor do lado:`))
+
+    return lado * lado
+
+}
+
+function areaTrapezio() {
+    const baseMaior = Number(prompt(`Informe a base maior:`))
+    const baseMenor = Number(prompt(`Informe a base menor:`))
+    const altura = Number(prompt(`Informe a altura`))
+
+    return (baseMaior + baseMenor) * altura / 2
+}
+
+function areaCirculo() {
+    const raio = Number(prompt(`Informe o valor do raio`))
+    const raioQuadrado = raio * raio
+
+    return raioQuadrado * 3.14
+}
+
+let endwhile = false
+
+while(endwhile !== true) {
+
+    let option = Number(prompt(`Bem vindo a nossa calculadora geométrica!! \n\n Essa é a lista de opções disponiveis \n ${lista.map((str, index) => `${index + 1}º :${str}`).join("\n")} \n\n Escoha uma opção para ser realizado o calculo.`))
+
+    if(option === 1) {
+        let resultadoTriangulo = areaTriangulo()
+
+        alert(`Esse é o valor do triangulo de acordo com os dados fornecidos ${resultadoTriangulo}`)
+    } else if(option === 2) {
+        let resultadoRetangulo = areaRetangulo()
+
+        alert(`Esse é o valor do Retangulo de acordo com os dados fornecidos ${resultadoRetangulo}`)
+    } else if(option === 3) {
+        let resultadoQuadrado = areaQuadrado()
+
+        alert(`Esse é o valor do Quadrado de acordo com os dados fornecidos ${resultadoQuadrado}`)
+    } else if(option === 4) {
+        let resultadoTrapezio = areaTrapezio()
+
+        alert(`Esse é o valor do Trapezio de acordo com os dados fornecidos ${resultadoTrapezio}`)
+    } else if(option === 5) {
+        let resultadoCirculo = areaCirculo()
+
+        alert(`Esse é o valor do Círculo de acordo com os dados fornecidos ${resultadoCirculo}`)
+    } else if(option === 6) {
+        alert(`Você escolheu sair.`)
+        alert(`Saindo...`)
+        endwhile = true
+    } else if(option > 6) {
+        alert(`Valor invalido.`)
+    }
+
+}
+</script>
+
+</html>
