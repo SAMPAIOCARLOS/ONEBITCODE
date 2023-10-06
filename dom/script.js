@@ -16,7 +16,7 @@ let valorAlturaDoRetangulo = document.getElementById('valorAlturaDoRetangulo')
 let calcularRetangulo = document.getElementById('calcularRetangulo')
 let resultadoRetangulo = document.getElementById('resultadoRetangulo')
 
-calcularRetangulo.addEventListener('click', function() {
+calcularRetangulo.addEventListener('click', () => {
     resultadoRetangulo.innerHTML = Number(valorBaseDoRetangulo.value) * Number(valorAlturaDoRetangulo.value)
 })
 
@@ -26,7 +26,7 @@ let valorDoLado = document.getElementById('valorDoLado')
 let calcularQuadrado = document.getElementById('calcularQuadrado')
 let resultadoQuadrado = document.getElementById('resultadoQuadrado')
 
-calcularQuadrado.addEventListener('click', function() {
+calcularQuadrado.addEventListener('click', () => {
     resultadoQuadrado.innerHTML = Number(valorDoLado.value) * Number(valorDoLado.value)
 })
 
@@ -38,8 +38,8 @@ let valorDaAlturaDoTrapezio = document.getElementById('valorDaAlturaDoTrapezio')
 let calcularTrapezio = document.getElementById('calcularTrapezio')
 let resultadoTrapezio = document.getElementById('resultadoTrapezio')
 
-calcularTrapezio.addEventListener('click', function() {
-    resultadoTrapezio.innerHTML = (Number(valorBaseMaior.value) + Number(valorBaseMenor.value)) * Number(valorDaAlturaDoTrapezio.value) / 2
+calcularTrapezio.addEventListener('click', () => {
+    resultadoTrapezio.innerHTML = ((Number(valorBaseMaior.value) + Number(valorBaseMenor.value)) * Number(valorDaAlturaDoTrapezio.value) / 2).toFixed(2)
 })
 
 //CIRCULO
@@ -48,10 +48,11 @@ let valorDoRaio = document.getElementById('valorDoRaio')
 let calcularCirculo = document.getElementById('calcularCirculo')
 let resultadoCirculo = document.getElementById('resultadoCirculo')
 
-calcularCirculo.addEventListener('click', function() {
+calcularCirculo.addEventListener('click', () => {
     resultadoCirculo.innerHTML = (Number(valorDoRaio.value) * Number(valorDoRaio.value))  * 3.14
 })
 
 // document.querySelector('form').addEventListener('submit', (event) => {
 //     event.preventDefault()
 // })  isso serve para tirar a função de determinado elemento
+
