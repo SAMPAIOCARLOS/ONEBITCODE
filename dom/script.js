@@ -5,7 +5,7 @@ let valorAlturaDoTriangulo = document.getElementById('valorAlturaDoTriangulo')
 let calcularTriangulo = document.getElementById('calcularTriangulo')
 let resultadoTriangulo = document.getElementById('resultadoTriangulo')
 
-calcularTriangulo.addEventListener('click', function() {
+calcularTriangulo.addEventListener('click', () => {
     resultadoTriangulo.innerHTML = Number(valorBaseDoTriangulo.value) * Number(valorAlturaDoTriangulo.value) / 2
 })
 

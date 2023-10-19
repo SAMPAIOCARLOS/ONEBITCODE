@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    
+<script>
+    let imoveis = []
+
+    let endwhile = false
+
+
+        while(endwhile !== true){
+
+            let option = Number(prompt(`Welcome ao cadastro de imoveis!! total de imóveis cadastrados: ${imoveis.length} \n Escolha uma das opções \n\n 1) save um new imóvel \n 2)mostrar todos os imóveis \n 3) Sair`))
+
+            switch(option) {
+                case 1 : let imovel = {}
+                imovel.proprietario = prompt('Informe o name do proprietario:')
+                imovel.quartos = prompt('Quantos quartos esse imóvel tem?')
+                imovel.banheiros = prompt('Quantos banheiros esse imóvel tem?')
+                imovel.garagem = prompt('Esse imóvel possui garagem? (sim/não)')
+
+                let confirmacao = confirm(`Você deseja realmente save esse imóvel? \n\n nome do proprietario: ${imovel.proprietario} \n quantidade de quartos: ${imovel.quartos} \n Quantidade de banheiros: ${imovel.banheiros} \n possui garagem: ${imovel.garagem}`)
+
+                if(confirmacao === true) {
+                    imoveis.push(imovel)
+                    alert(`Imóvel salvo com sucesso`)
+                }
+
+                break
+
+                case 2 : for(let i = 0; i < imoveis.length; i++) {
+                    alert(`Imovel ${i + 1} \n proprietario: ${imoveis[i].proprietario} \n total de quartos: ${imoveis[i].quartos} \n total de banheiros: ${imoveis[i].banheiros} \n possui garagem: ${imoveis[i].garagem}`)
+                }
+
+                break
+
+                case 3 : alert(`Você escolheu sair.`)
+                alert(`Saindo...`)
+                
+                endwhile = true
+          }
+        }
+
+</script>
+
+</html>
