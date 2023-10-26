@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: black;
+            color: #fff;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="li" >
+            teste
+        </li>
+    </ul>
+</body>
+<script>
+
+    let li = document.getElementById('li')
+
+    let contador = 0
+li.addEventListener('mouseenter', ()=> {
+    // contador ++
+    // if(contador > 1) {
+    //     return
+    // }
+    const newp = document.createElement('p')
+    newp.innerHTML = 'testeando'
+
+    li.appendChild(newp)
+
+    li.style.paddingBottom = '100px'
+    li.style.transition = '1s'
+    
+    li.addEventListener('mouseout', () => {
+    li.style.paddingBottom = '0px'
+
+    li.removeChild(newp)
+    
+})
+    
+})
+
+
+</script>
+</html>

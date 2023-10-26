@@ -1,24 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Criando Novos Elementos no DOM</title>
-  <script src="./index.js"></script>
+  <title>Document</title>
   <style>
-    
+    body{
+      background-color: #000;
+      display: flex;
+      gap: 30px;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      color: blue;
+    }
+    .div1{
+      border: 1px solid red;
+      width: 300px;
+      height: 300px;
+      display: flex;
+    }
+    .div2{
+      border: 1px solid red;
+      width: 300px;
+      height: 300px;
+    }
+    .div3{
+      border: 1px solid red;
+      width: 300px;
+      height: 300px;
+    }
+    .buttons{
+      /* border: 1px solid rgb(17, 0, 255); */
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+    .section1{
+      width: 49%;
+      height: 100%;
+      /* border: 1px solid rgb(17, 0, 255); */
+    }
+    .section2{
+      width: 49%;
+      height: 100%;
+      /* border: 1px solid rgb(17, 0, 255); */
+      
+    }
   </style>
+</head>
 <body>
-  <h1 id="h1">Criando Novos Elementos no DOM</h1>
 
-  <button onclick="addInput()">Adicionar Input</button>
+  <aside>
+    <div class="div1">
+      <section class="section1">
+        
+      </section>
+      <section class="section2"></section>
+    </div>
+    <div class="buttons">
+      <button id="addText" onclick="addTexto()">add text</button>
+      
+      <button id="addList" onclick="">add list</button>
+    </div>
+  </aside>
 
-  <ul id="inputs">
+  <aside>
+    <div class="div2">
+    </div>
+    <div class="buttons">
+      <button id="addInput" onclick="">add input</button>
+    </div>
+  </aside>
 
-  </ul>
+  <aside>
+    <div class="div3">
+    
+    </div>
+    <div class="buttons">
+      <button id="addImg" onclick="">add img</button>
+    </div>
+  </aside>
+
 </body>
- <script src="addDom.js">
- </script>
+
+<script src="addDom.js"></script>
+
 </html>

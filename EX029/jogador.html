@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jogador.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            border: 1px solid red;
+            width: 100vw;
+            height: 100vh;
+            
+        }
+        .grupo{
+            display: flex;
+            justify-content: space-around;
+            width: 95%;
+            height: 95%;
+        }
+        .container1{
+            border: 1px solid black;
+            width: 49%;
+            height: 100%;
+        }
+        .container2{
+            border: 1px solid black;
+            width: 49%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Escalação de jogadores</h1>
+         
+            <div class="grupo">
+                <section class="container1">
+                    <br><br>
+                    <h2>Escalar um jogador</h2>
+
+                    <label for="input1">Informar a posição do jogador a ser escalado para o time.</label>
+                    <input type="text" id="input1">
+<br>
+                    <label for="input2">Informar o nome do jogador.</label>
+                    <input type="text" id="input2">
+<br>
+                    <label for="input3">nformar o número da camisa do jogador.</label>
+                    <input type="text" id="input3">
+<br>
+
+                    <button id="Escalar" onclick="escalar()">Escalar</button>
+                    <div id="lista">
+
+                    </div>
+                </section>
+
+                <section class="container2">
+
+                </section>
+            </div>
+        
+    </div>
+</body>
+<script src="jogador.js"></script>
+</html>
