@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <button id="button">aqui</button>
+
+    <ul id="list">
+        <img src="" alt="">
+    </ul>
+</body>
+
+<script>
+    const button = document.getElementById('button')
+
+    button.addEventListener('click', ()=> {
+        fetch('sla.json').then((response)=> {
+            return response.json()
+        }).then((data)=> {
+            
+            const list = document.getElementById('list')
+            for(let i = 0; i < data.length; i++) {
+
+                const item = data[i]
+
+                const newli = document.createElement('li')
+                const img = document.createElement('img')
+                img.setAttribute('src', item.url)
+
+                img.style.border = '1px dashed blue'
+                img.style.width = '200px'
+                newli.appendChild(img)
+
+                list.appendChild(newli)
+            }
+        })
+    })
+</script>
+</html>

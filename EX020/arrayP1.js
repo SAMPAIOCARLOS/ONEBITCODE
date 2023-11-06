@@ -98,4 +98,5 @@ console.log(inclui)
 
 let indice = arrayNomes.indexOf("leonardo")
 
+
 console.log(indice)

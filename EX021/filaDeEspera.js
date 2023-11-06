@@ -21,7 +21,7 @@ while(finalizarWhile !== true) {
         finalizarWhile = true
     }
 };
-export let endwhile = false;
+ let endwhile = false;
 
 
 

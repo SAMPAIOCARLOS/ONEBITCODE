@@ -1,24 +1,29 @@
-const input1 = document.getElementById('input1')
-const input2 = document.getElementById('input1')
-const input3 = document.getElementById('input1')
+let input1 = document.getElementById('input1')
+let input2 = document.getElementById('input2')
+let input3 = document.getElementById('input3')
 
-function escalar() {
 
-    let option = prompt(`Deseja salvar as informações desse jogador? \n\n Posição do jogador: ${input1.value} \n Nome do jogador: ${input2.value} \n Numero da camisa: ${input3.value} \n (sim/não)`) 
-    
-    switch(option.toLowerCase()) {
-        case 'sim':
-            const lista = document.getElementById('lista')
-            const newUl = document.createElement('ul')
-            const newLi = document.createElement('li')
-            newLi.innerText = `Posição:${input1.value}`
-            newLi.innerText = `Nome: ${input2.value}`
-            newLi.innerText = `numero camisa: ${input3.value}`
+const Escalar = document.getElementById('Escalar')
 
-            lista.appendChild(newUl)
-            newUl.appendChild(newLi)
-            // newLi.appendChild(input1.value)
+Escalar.addEventListener('click', ()=> {
 
+    let confirmacao = confirm(`Deseja escalar esse jogador?`)
+
+    if(confirmacao) {
+        const list = document.getElementById('list')
+
+        const position = document.createElement('li')
+        position.innerHTML = input1.value
+        list.appendChild(position)
+        const name = document.getElementById('li')
+        name.innerText = input2.value
+        list.appendChild(name)
+        const number = document.getElementById('li')
+        number.innerText = input3.value
+        list.appendChild(number)
+        
+        
+        
+        
     }
-
-}
+})
