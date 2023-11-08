@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myul">
+
+    </ul>
+    <button id="mybutton">aqui</button>
+</body>
+<script>
+    const personagens = [
+    { nivel: 42, nome: "thrall", raca: "Orc", classe: "Xamã" },
+    { nivel: 28, nome: "Garrosh", raca: "Orc", classe: "Guerreiro" },
+    { nivel: 35, nome: "Varok", raca: "Orc", classe: "Guerreiro" },
+    { nivel: 35, nome: "Uther", raca: "Humano", classe: "Paladino" },
+    { nivel: 26, nome: "Jaina", raca: "Humano", classe: "Maga" },
+    { nivel: 39, nome: "Tyrande", raca: "Elfo Noturno", classe: "Sacerdotisa" },
+    { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
+  ]
+
+let button = document.getElementById('mybutton')
+
+button.addEventListener('click', ()=> {
+
+  const myul = document.getElementById('myul')
+
+  personagens.map((data)=> {
+    let newli = document.createElement('li')
+     if(data.raca === 'Orc'){
+      newli.innerHTML = data.nome
+      newli.style.listStyle = 'none'
+     }
+    myul.appendChild(newli)
+  })
+})
+</script>
+</html>

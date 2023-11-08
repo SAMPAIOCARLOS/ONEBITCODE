@@ -8,22 +8,23 @@ const Escalar = document.getElementById('Escalar')
 Escalar.addEventListener('click', ()=> {
 
     let confirmacao = confirm(`Deseja escalar esse jogador?`)
-
     if(confirmacao) {
-        const list = document.getElementById('list')
-
-        const position = document.createElement('li')
+        
+        const position = document.getElementById('position')
         position.innerHTML = input1.value
-        list.appendChild(position)
-        const name = document.getElementById('li')
-        name.innerText = input2.value
-        list.appendChild(name)
-        const number = document.getElementById('li')
-        number.innerText = input3.value
-        list.appendChild(number)
-        
-        
-        
+        position.style.display = 'block'
+
+        const name = document.getElementById('name')
+        name.innerHTML = input2.value
+        name.style.display = 'block'
+
+        const num = document.getElementById('num')
+        num.innerHTML = input3.value
+        num.style.display = 'block'
+
+        input1.value = '' 
+        input2.value = '' 
+        input3.value = '' 
         
     }
 })
