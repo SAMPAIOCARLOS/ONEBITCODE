@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: black;
+            color: #fff;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .altura {
+        height: 50px; /* altura normal */
+        }
+
+        .altura.mais {
+        height: 100px; /* altura expandida */
+        
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="altura" >
+            teste
+        </li>
+    </ul>
+</body>
+
+<script>
+
+const listItem = document.querySelector('.altura');
+
+listItem.addEventListener('click', function() {
+  listItem.classList.toggle('mais');
+    listItem.style.transition = '1s'
+  
+});
+
+</script>
+</html>
