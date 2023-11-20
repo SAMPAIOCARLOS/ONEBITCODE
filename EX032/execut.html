@@ -28,7 +28,7 @@ button.addEventListener('click', ()=> {
 
   const myul = document.getElementById('myul')
 
-  personagens.map((data)=> {
+  personagens.filter((data)=> {
     let newli = document.createElement('li')
      if(data.raca === 'Orc'){
       newli.innerHTML = data.nome
